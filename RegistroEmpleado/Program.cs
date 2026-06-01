@@ -25,8 +25,11 @@ void mostrarDatos(int pos)
 }
     int menu()
 {
-      Console.WriteLine("1. Agregar \n2. Mostrar \n3. Guardar \n4. Salir \nDigite su opcion:  ");
+    Console.ForegroundColor= ConsoleColor.Green;
+    Console.WriteLine("1. Agregar \n2. Mostrar \n3. Guardar \n4. Salir \nDigite su opcion:  ");
+    Console.ForegroundColor = ConsoleColor.Blue;
     int op = int.Parse(Console.ReadLine());
+    Console.ResetColor();
     return op;
 }
 void guardarEmpleados(int pos)
