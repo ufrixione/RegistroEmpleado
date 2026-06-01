@@ -1,4 +1,6 @@
 ﻿
+using System.Runtime.Serialization.Formatters;
+
 Empleado[] empleados = new Empleado[10];
 
 void agregarEmpleado(int pos)
@@ -50,7 +52,12 @@ void guardarEmpleados(int pos)
 int main()
 {
     int op = 0, i = 0;
-
+    Console.Write("Cargando");
+    for(int j = 0; j < 10; j++)
+    {
+        Thread.Sleep(1000);
+        Console.Write(".");
+    }
     do
     {
         Console.WriteLine($"Registro: {i + 1}");
