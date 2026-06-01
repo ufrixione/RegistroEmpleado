@@ -13,6 +13,7 @@ void agregarEmpleado(int pos)
     empleados[pos].salario = double.Parse(Console.ReadLine());
     Console.ForegroundColor = ConsoleColor.Green;
     Console.WriteLine("Registro guardado satisfactoriamente ");
+    Console.ReadKey();
     Console.ResetColor();
 }
 void mostrarDatos(int pos)
@@ -22,7 +23,9 @@ void mostrarDatos(int pos)
     {
         Console.WriteLine($"Nombre: {empleados[i].nombre}\nApellidos:{empleados[i].apellido}\nCargo: {empleados[i].cargo}\nSalario: {empleados[i].salario}");
 }
+    Console.ReadKey();
 }
+
     int menu()
 {
     Console.ForegroundColor= ConsoleColor.Green;
@@ -41,6 +44,7 @@ void guardarEmpleados(int pos)
     }
     archivo.Close();
     Console.WriteLine("Registro guardados.");
+    Console.ReadKey();
 }
 
 int main()
